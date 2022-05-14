@@ -13,9 +13,6 @@ var maxProduct = function(nums) {
     // console.log('currMax is ', currMax)
     // console.log('currMin is ', currMin)
     nums.forEach(num => {
-        if(num === 0) {
-            
-        }
         let temp = num * currMax;
         // console.log("===========================")
         // console.log(num)
