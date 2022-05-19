@@ -19,7 +19,7 @@ var twoSum = function(numbers, target) {
             
             result[0] = map.get(num)+1;
             result[1] = i+1;
-            return [map.get(num)+1, i+1]
+            // return [map.get(num)+1, i+1]
             break;
         }
         console.log('i is', i)
