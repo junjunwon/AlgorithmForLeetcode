@@ -1,5 +1,5 @@
 class Solution {
-    public int[] countBits(int n) {
+    public int[] countBits2(int n) {
         /**
         dynamic programming 
         TC : O(n)
@@ -15,7 +15,7 @@ class Solution {
          }
          return dp;
     }
-    public int[] countBitsByme(int n) {
+    public int[] countBits(int n) {
         /**
         methods
             extract "1" in list consist of "0", "1" <- we don't need anymore if we only save "1" value, -> check the length of arrayList 
