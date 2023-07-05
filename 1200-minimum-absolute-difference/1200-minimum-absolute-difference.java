@@ -1,6 +1,11 @@
 import java.util.*;
 
 class Solution {
+    /**
+    TC : O(n)
+    SC : O(2n)
+    stupid way : 17mins
+    **/
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         
         List<List<Integer>> results = new ArrayList();
@@ -23,8 +28,6 @@ class Solution {
 //                 }
 //             }
 //         }
-        
-        
         
         for (int i = 0; i < arr.length - 1; i++) {
             List<Integer> result = new ArrayList();
