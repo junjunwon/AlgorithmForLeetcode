@@ -14,7 +14,7 @@ class Solution {
                 miniGap = gap;
             }
         }
-        
+//          Stupid way 
 //         for (int i = 0; i < arr.length; i++) {
 //             for (int j = i+1; j < arr.length; j++) {
 //                 int gap = Math.abs(arr[i] - arr[j]);
