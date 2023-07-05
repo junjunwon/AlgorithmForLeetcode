@@ -1,5 +1,6 @@
 import java.util.*;
 class Solution {
+
     Map<String, Integer> map = new HashMap();
     Map<String, Integer> combinedMap = new HashMap();
     
@@ -61,5 +62,4 @@ class Solution {
         }   
         return result;
     }
-    
 }
