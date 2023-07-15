@@ -4,6 +4,45 @@ class Solution {
     4 4 8 9 9
     **/
     public int[] intersect(int[] nums1, int[] nums2) {
+
+        // map
+        // loop num1's elements -> map (value will be key count)
+
+        // loop nums2 array
+        // if map1 contains 
+        // append value into the resu
+        
+
+        // (1 2 2 1), (2,2)
+        // check elems in nums2 if exsits in map -> increase the value + 1
+
+        // num1, num2 array
+
+        // 1
+        // hold the key, value into the map (key: then number,value; count) 
+        // num1 map, num2 map
+        Map<Integer, Integer> map1 = new HashMap<>();
+
+        for (int i = 0; i < nums1.length; i++) {
+            int target = nums1[i];
+            map1.put(target, map1.getOrDefault(target, 0) + 1);
+        }
+
+        List<Integer> result = new ArrayList();
+
+        for (int i = 0 ; i < nums2.length; i++) {
+            int target = nums2[i];
+            if (map1.containsKey(target) && map1.get(target) > 0) {
+                result.add(target);
+                map1.put(target, map1.get(target) - 1);
+            }
+        }
+
+        return result.stream().mapToInt(Integer::intValue).toArray();
+    }
+    
+    public int[] intersect00(int[] nums1, int[] nums2) {
+        //박준호님 풀이 
         // (1 2 2 1), (2,2)
 
         // num1, num2 array
