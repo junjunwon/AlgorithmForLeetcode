@@ -3,7 +3,7 @@ class Solution {
     4 5 9
     4 4 8 9 9
     **/
-    public int[] intersect(int[] nums1, int[] nums2) {
+    public int[] intersect000(int[] nums1, int[] nums2) {
 
         // map
         // loop num1's elements -> map (value will be key count)
@@ -127,7 +127,7 @@ class Solution {
     }
     
     
-    public int[] intersect1(int[] nums1, int[] nums2) {
+    public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap();
         List<Integer> temp = new ArrayList();
         
