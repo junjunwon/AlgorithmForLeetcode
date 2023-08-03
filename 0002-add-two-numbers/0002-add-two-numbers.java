@@ -34,8 +34,6 @@ class Solution {
             tail = tail.next;
         }
 
-        ListNode result = dummyHead.next;
-        // dummyHead.next = null;
         return dummyHead.next;
     }
 }
