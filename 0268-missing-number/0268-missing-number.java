@@ -5,6 +5,20 @@ second : find missing number.
  */
 class Solution {
     public int missingNumber(int[] nums) {
+        int totalSum = 0;
+        int missingSum = 0;
+
+        for (int i = 0; i <= nums.length; i++) {
+            totalSum += i;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            missingSum += nums[i];
+        }
+
+        return totalSum - missingSum;
+    }
+
+    public int missingNumberStupid(int[] nums) {
         int size = nums.length;
         Arrays.sort(nums);
         if (nums[size-1] != size) {
