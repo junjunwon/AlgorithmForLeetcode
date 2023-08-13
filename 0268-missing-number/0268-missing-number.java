@@ -15,12 +15,11 @@ class Solution {
 index : 0 1 2
 value : 0 1 3
  */
-    int find = 0;
         for (int i = 0; i < nums.length-1; i++) {
             if (nums[i+1] > nums[i] + 1) {
-                find = nums[i+1] - 1;
+                return nums[i+1] - 1;
             }
         }
-        return find;
+        return 0;
     }
 }
