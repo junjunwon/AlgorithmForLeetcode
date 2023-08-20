@@ -35,8 +35,8 @@ class Solution {
         }
 
         return result;
-        
     }
+    
     public int threeSumClosestStupid(int[] nums, int target) {
         int firstP = 0;
         int secondP = 1;
