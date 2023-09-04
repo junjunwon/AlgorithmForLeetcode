@@ -8,20 +8,16 @@ we have to check whether we visited or not anyway before you visit each next i,j
  import java.util.*;
 
 class Solution {
-    /**
-       -10
-    0-1 00 0 1
-       10
-     */
-    static int[] dx = {0, -1, 1, 0};
-    static int[] dy = {-1, 0, 0, 1};
-
-    static boolean[][] visited;
-    static Queue<Spot> q = new LinkedList();
-
-
-    public void bfs(Spot input, char[][] grid) {
-
+    public void bfs(Spot input, char[][] grid, boolean[][] visited) {
+        /**
+            -10
+        0-1 00 0 1
+            10
+        */
+        int[] dx = {0, -1, 1, 0};
+        int[] dy = {-1, 0, 0, 1};
+        Queue<Spot> q = new LinkedList();
+        
         q.add(input);
         
         while(!q.isEmpty()) {
@@ -47,14 +43,14 @@ class Solution {
     
     public int numIslands(char[][] grid) {
         
-        visited = new boolean[grid.length][grid[0].length];
+        boolean[][] visited = new boolean[grid.length][grid[0].length];
         int count = 0;
 
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (visited[i][j] == false && grid[i][j] == '1') {
                     visited[i][j] = true;
-                    bfs(new Spot(i, j), grid);
+                    bfs(new Spot(i, j), grid, visited);
                     count++;
                 }
                 
